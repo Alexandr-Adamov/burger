@@ -1,0 +1,109 @@
+
+
+.footer {
+    background-color: #0f0f0f;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(7px) rem(69px) rem(10px) rem(78px);
+    @include phones {
+        flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+    }
+
+.map{
+    position: relative;
+}
+
+
+.map__container {
+    width: 100%;
+    position: absolute;
+    z-index: 200;
+    bottom: 0;
+}
+
+.contacts {
+    font-family: ubuntu;
+    font-size: rem(14px);
+    font-weight: 300;
+    font-style: normal;
+    @include phones {
+        padding-bottom: rem(17px);
+        font-size: rem(13px);
+    }
+    
+}
+
+.contacts__adress {
+    color: $white;
+    margin-bottom: rem(6px);
+    @include phones {
+        padding-bottom: rem(5px);
+    }
+    
+}
+
+.contacts__phone {
+    color: $orange;
+    text-decoration: none;
+    font-weight: 800;
+    &:before {
+        content: "";
+        width: rem(17px);
+        height: rem(14px);
+        display: inline-flex;
+        background: url("../images/section__map/phome.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+.social {
+    display: flex;
+}
+
+.social__list {
+    display: flex;
+    align-items: center;
+}
+
+.social__item {
+    padding-left: rem(13px);
+}
+
+.social__link {
+    content: "";
+    width: rem(25px);
+    height: rem(25px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.social__link--wk {
+    background-image: url("../images/section__map/vk.png");
+}
+
+.social__link--fb {
+    background-image: url("../images/section__map/fb_hover.png");
+}
+
+.social__link--inst {
+    background-image: url("../images/section__map/inst.png");
+}
+
+.social__link--tw {
+    background-image: url("../images/section__map/twitter.png");
+}
+
+
+

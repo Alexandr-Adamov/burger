@@ -1,0 +1,130 @@
+.best {
+    background-image: url("../images/section__best/best_bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    display: flex;
+}
+
+.best__block {
+    @include phones {
+        display: flex;
+    }
+}
+
+.best__desc {
+    max-width: 86%;
+    @include phones {
+    max-width: 100%;
+    }
+}
+
+.best__desc_text {
+    margin-top: rem(25px);
+    padding-bottom: 2%;
+    @include phones {
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+}
+
+.best__block_icon {
+        @include phones {
+        display: flex;
+        align-items: center;
+        padding-right: rem(10px);
+        }
+    }
+
+.best__block_icon--padding {
+    @include phones {
+        padding-right: rem(31px);
+    }
+}    
+
+
+
+.section__title {
+    color: $yellow;
+    font-family: gagalin;
+    font-size: rem(72px);
+    font-weight: 400;
+    line-height: 1.42;
+    margin: 0;
+    padding-top: rem(56px);
+    @include tablets {
+        padding-top:0;
+        font-size: rem(67px);
+    }
+    @include phones {
+        font-size: rem(50px);
+    }
+
+}
+
+.section__title--best {
+    color: $dark;
+    padding: 0;
+    
+}
+
+.section__title_team {
+    padding-top: rem(0px);
+
+}
+
+.section__title_job {
+    padding-top: rem(0px);
+    font-size: rem(62px);
+    padding-bottom: rem(18px);
+}
+
+.best__list {
+    display: flex;
+    justify-content: center;
+    @include phones {
+        flex-direction: column;
+
+    }
+}
+
+.best__item {
+    text-align: center;
+    flex: 1 0 rem(200px);
+    padding: rem(0px) rem(8px) rem(0px) rem(6px);
+    @include phones {
+        padding: 0;
+    }
+}
+
+.best__title {
+    font-family: lifehack;
+    font-size: rem(24px);
+    line-height: 1.42;
+    color: $dark;
+    @include phones {
+        font-size: rem(18px);
+    }
+
+}
+
+.best__text {
+    font-family: ubuntu;
+    font-weight: 500;
+    font-size:rem(14px);
+    color: #9a9998;
+    line-height: 1.7;
+    @include tablets {
+        font-size: rem(14px);
+    }
+
+    @include phones {
+        text-align: start;
+    }
+
+}
+
+
+
+

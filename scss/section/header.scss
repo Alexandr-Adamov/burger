@@ -1,0 +1,128 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(10px);
+    @include tablets {
+        padding-top: rem(10px);
+    }
+}
+
+.header__logo {
+    margin-right: auto;
+    display: block;
+    z-index: 200;
+}
+
+.logo__img {
+    @include phones {
+        width: 75%;
+    }
+}
+
+.header__menu {
+    @include tablets {
+        display: none;
+    }
+}
+
+.nav {
+    margin-right: rem(15px);
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+.nav__item:after {
+    display: inline-flex;
+    justify-content: center;
+    content: "";
+    width: rem(5px);
+    height: rem(5px);
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 rem(12px);
+}
+
+
+.nav__item:last-child:after {
+    display: none;
+}
+
+.nav__link {
+    display: inline-flex;
+    color: $white;
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: 1.42;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: 0.5s;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.burger__btn {
+    width: rem(40px);
+    height: rem(40px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding : rem(29px);
+    @include tablets {
+display: flex;
+    }
+}
+
+.burger__form {
+    display: flex;
+    justify-content: center;
+    min-width: rem(30px);
+    border: rem(2px) solid $white;
+    background-color: $white;
+    position: relative;
+    &::after {
+        content:'';
+        width: rem(30px);
+        border: rem(2px) solid $white;
+        background-color: $white;
+        position: absolute;
+        top: rem(7px);
+    }
+    &::before {
+        content:'';
+        width: rem(30px);
+        border: rem(2px) solid $white;
+        background-color: $white;
+        position: absolute;
+        top: rem(-11px);
+    }
+}
+
+
+.burger__form--open {
+    
+    width: 0;
+    border: 0;
+    &::after {
+        top: 0;
+        transform: rotate(45deg);
+
+    }
+    &::before{
+        top: 0;
+        transform: rotate(-45deg);
+        transition: 1s;
+    }
+}
+
+.burger__input {
+    display: none;
+}

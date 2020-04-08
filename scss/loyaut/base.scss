@@ -1,0 +1,39 @@
+html {
+    font-size: rem(16px);
+
+    @include tablets{
+        font-size: rem(13px);
+    }
+
+    @include phones{
+        font-size: rem(11px);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.42;
+    font-size: rem(16px);
+    font-family: ubuntu , Arial, Helvetica, sans-serif;
+    -webkit-font-smoothink:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+*,*::before , *::after {
+    box-sizing: border-box;
+}
+
+body,html {
+    height: 100%;
+} 
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}

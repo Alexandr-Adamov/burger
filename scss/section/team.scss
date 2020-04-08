@@ -1,0 +1,155 @@
+.team {
+    background-image: url("../images/section__team/team__bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+}
+
+.team__container {
+
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(69, 69, 69, .93);
+    width: 49%;
+    padding-left: 9%;
+    padding-top: 8%;
+    @include tablets {
+        min-width: 100%;
+        left: 0;
+        box-sizing: content-box;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+                
+
+    }
+}
+
+.team__content {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+}
+
+.team__item {
+    padding:rem(26px) rem(0px) rem(5px);
+}
+
+.team__accordion_photo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+.team__accordion {
+    padding-right: 6%;
+    padding-top: 25%;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.team__accordion_pic {
+    width: rem(100px);
+    height: rem(100px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+
+}
+
+.team__accordion_content {
+    @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+}
+
+.team__accordion_title{
+    font-size: rem(14px);
+    font-weight: 900;
+    @include tablets {
+        margin-bottom: rem(11px);
+    }
+}
+
+.team__accordion_desc {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    font-family: ubuntu;
+    font-size: rem(14px);
+    width: 50%;
+    @include tablets {
+        font-size: rem(13px);
+    }
+}
+
+.team__accordion--trigger {
+    color:$white;
+    display: flex;
+    align-items: center;
+    font-family: gagalin;
+    font-size: rem(14px);
+    text-transform: uppercase;
+    cursor: pointer;
+    @include tablets {
+        font-size:rem(25px);
+    }
+    @include phones {
+        font-size: rem(20px);
+    }
+}
+
+.team__accordion--trigger:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: rem(5px) solid transparent;
+    border-top-color:$yellow;
+    border-bottom-width: 0;
+    margin-right: rem(9px);
+}
+
+.team__accordion_content {
+    display: none;
+    padding: rem(12px) rem(0px) rem(22px);
+    
+}
+
+.team__accordion_text {
+    line-height: 1.7;
+}
+
+
+.team__item_activ {
+    .team__accordion--trigger {
+        color:$yellow;
+        &:before {
+            transform: rotate(-180deg);
+        }
+    }
+    .team__accordion_content {
+        display: flex;
+    }
+    @include tablets {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}

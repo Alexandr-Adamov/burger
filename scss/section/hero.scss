@@ -1,0 +1,156 @@
+.hero {
+    background-image: url("../images/section_hero/background.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.hero__burger_menu {
+    position: absolute;
+    background: rgba(47, 50, 52, 0.99);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.hero__container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding-bottom: 8%;
+    padding-left: rem(23px);
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0 5.78571rem;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.hero__content_block {
+    display: flex;
+}
+
+.hero__img ,.hero__description {
+    flex-basis: 50%;
+    display: flex;
+    @include tablets {
+        width: 100%;
+        justify-content: center;
+        flex-basis: 100%;
+    
+    }
+    @include phones {
+        padding: rem(0px) rem(10px) 0 rem(10px);
+    }
+    
+}
+
+
+
+.hero__burger{
+    display: block;
+    width: 100%;
+}
+
+.hero__description {
+    justify-content: center;
+    flex-direction: column;
+    @include tablets {
+        text-align: center;
+        display: block;
+    }
+    @include phones {
+        padding-top: rem(15px);
+    }
+}
+
+.hero__description-text {
+    color: $white;
+    font-family: lifehack;
+    font-size: rem(63px);
+    font-weight: 500;
+    line-height: 1;
+        @include tablets {
+        padding-top: 0;
+        padding-bottom: rem(60px);
+        font-size: rem(73px);
+        }
+        @include phones {
+            font-size: rem(44px);
+        }
+}
+
+.arrow {
+    width: rem(40px);
+    height: rem(20px);
+    background-image: url('../images/section_hero/arrow.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 4%;
+    @include tablets {
+        margin-bottom: 13%;
+    }
+    
+}
+
+.hamburger__menu_list--hidden {
+    display: none;
+    }
+
+    .hamburger__menu_list {
+        text-align: center;
+    }
+
+    .hamburger__menu_link {
+        color: #fff;
+        font-weight: 500;
+        font-size: rem(16px);
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        
+    }
+
+    .hamburger__menu_item{
+        position: relative;
+        margin-bottom: rem(30px);
+        &:after {
+        content: "";
+        width: rem(10px);
+        height: rem(10px);
+        @include circle(rem(4px) , $white);
+        position: absolute;
+        top: rem(35px);
+        left: rem(41px);
+    }
+    &:last-child::after {
+        display: none;
+    }
+}
