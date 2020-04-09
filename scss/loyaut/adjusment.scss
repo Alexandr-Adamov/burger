@@ -42,6 +42,7 @@
     line-height: 1.42;
     text-transform: uppercase;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .fixed__menu {
@@ -58,6 +59,7 @@
     @include circle(rem(6px) ,#99A3A4);
     margin-bottom: rem(17px);
     position: relative;
+    cursor: pointer;
     &:before {
         content: "";
         width: rem(16px);

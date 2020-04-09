@@ -108,6 +108,7 @@
     color: $white;
     position: relative;
     margin-right: rem(17px);
+    cursor: pointer;
     &::before {
         content: ""; 
         display: inline-flex;
@@ -149,6 +150,7 @@
     color: $white;
     position: relative;
     padding-bottom: rem(27px);
+    cursor: pointer;
     &:before {
         content: "";
         display: inline-flex;

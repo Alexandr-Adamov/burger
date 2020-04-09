@@ -121,6 +121,7 @@ p {
   line-height: 1.42;
   text-transform: uppercase;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .fixed__menu {
@@ -141,6 +142,7 @@ p {
   background-color: #99A3A4;
   margin-bottom: 1.0625rem;
   position: relative;
+  cursor: pointer;
 }
 .fixed__link:before {
   content: "";
@@ -418,6 +420,7 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   margin-bottom: 4%;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .arrow {
@@ -786,6 +789,7 @@ p {
   position: absolute;
   top: -3.4375rem;
   left: 2.1875rem;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .dark__composition {
@@ -1136,6 +1140,7 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .reviews__item {
@@ -1405,6 +1410,7 @@ p {
   color: #ffffff;
   position: relative;
   margin-right: 1.0625rem;
+  cursor: pointer;
 }
 .form__radio_text::before {
   content: "";
@@ -1444,6 +1450,7 @@ p {
   color: #ffffff;
   position: relative;
   padding-bottom: 1.6875rem;
+  cursor: pointer;
 }
 .form__checkbox_text:before {
   content: "";
@@ -1726,6 +1733,7 @@ p {
   display: flex;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .menu__accordion_content {
