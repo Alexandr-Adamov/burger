@@ -49,7 +49,7 @@ function init() {
     var map = new ymaps.Map('map', {
         center: [59.94, 30.32],
         zoom: 11,
-        behaviors: ['drag']
+        behaviors: ['']
     });
 
     for (var i = 0; i < placemarks.length; i++) {

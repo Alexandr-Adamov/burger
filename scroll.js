@@ -60,8 +60,9 @@ var swipeAcc = 0;
     var finalPoint;
     var swipeContent = document.querySelector('.maincontent')
     swipeContent = addEventListener('touchstart', function(event) {
-    initialPoint=event.changedTouches[0];
+    event.preventDefault();
     event.stopPropagation();
+    initialPoint=event.changedTouches[0];
     }, false)
     swipeContent = addEventListener('touchend', function(event) {
     event.preventDefault();
@@ -69,21 +70,21 @@ var swipeAcc = 0;
     finalPoint=event.changedTouches[0];
     var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
     var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
-    if (xAbs < 10 || yAbs < 10){
-        event.preventDefault();
+    if (xAbs < 3 || yAbs < 3){
+        
         return
     }
     if (finalPoint.pageY < initialPoint.pageY ){
-        event.preventDefault();
+        
         if(scrollAcc/100*-1 < allLink.length-1){
-            event.preventDefault();
+            
             swipeAcc= swipeAcc -100;
             contant.style.transform = 'translateY(' + swipeAcc + '%)'
         }
         scrollAcc = swipeAcc
     }else{
         if (scrollAcc/100*-1 !== 0) {
-            event.preventDefault();
+            
             swipeAcc= swipeAcc +100;
             contant.style.transform = 'translateY(' + swipeAcc + '%)'
         }
