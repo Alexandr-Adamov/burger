@@ -70,16 +70,20 @@ var swipeAcc = 0;
     var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
     var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
     if (xAbs < 10 || yAbs < 10){
+        event.preventDefault();
         return
     }
     if (finalPoint.pageY < initialPoint.pageY ){
+        event.preventDefault();
         if(scrollAcc/100*-1 < allLink.length-1){
+            event.preventDefault();
             swipeAcc= swipeAcc -100;
             contant.style.transform = 'translateY(' + swipeAcc + '%)'
         }
         scrollAcc = swipeAcc
     }else{
         if (scrollAcc/100*-1 !== 0) {
+            event.preventDefault();
             swipeAcc= swipeAcc +100;
             contant.style.transform = 'translateY(' + swipeAcc + '%)'
         }
@@ -133,7 +137,7 @@ function headerScrollMenu (e) {
     swipeAcc = navItem
     scrollAcc = navItem
     removeActiveClass (e)
-    allLink[navItem/100*-1].classList.add('fixed__link_active')
+    hamburgerButtonMenu ()
 }
 //скрол при клике на стрелку вниз
 var arrow = document.querySelector('.arrow')
