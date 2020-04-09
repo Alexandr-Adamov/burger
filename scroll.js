@@ -70,7 +70,7 @@ var swipeAcc = 0;
     finalPoint=event.changedTouches[0];
     var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
     var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
-    if (xAbs < 3 || yAbs < 3){
+    if (xAbs < 1 || yAbs < 1){
         
         return
     }
