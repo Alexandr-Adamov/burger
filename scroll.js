@@ -3,6 +3,17 @@ var contant = document.querySelector('.maincontent')
 var inScroll = false
 var allLink = document.getElementsByClassName('fixed__link')
 
+contant.addEventListener('touchmove', function(e){
+    e.preventDefault()
+    e.target.loading = false
+    console.log(e)
+    console.log(e.target.loading)
+})
+
+
+
+
+
 var scrollAcc = 0;
 var scroll = addEventListener('wheel', function (e) {
     var deltaY = e.deltaY
@@ -147,3 +158,6 @@ arrow.addEventListener('click',function (e){
     contant.style.transform = 'translateY(' + -100 + '%)'
     allLink[1].classList.add('fixed__link_active')
 })
+
+
+console.log(e)
