@@ -5,13 +5,7 @@ var allLink = document.getElementsByClassName('fixed__link')
 
 contant.addEventListener('touchmove', function(e){
     e.preventDefault()
-    e.target.loading = false
-    console.log(e)
-    console.log(e.target.loading)
 })
-
-
-
 
 
 var scrollAcc = 0;
