@@ -25,6 +25,8 @@ var scroll = addEventListener('wheel', function (e) {
         for (var i = 0; i < allLink.length; i++) {
             if (allLink[i] !== [activeSection * -1]) {
                 allLink[i].classList.remove('fixed__link_active')
+            }else{
+                return
             }
         }
         allLink[activeSection].classList.add('fixed__link_active')
@@ -58,7 +60,6 @@ var swipeAcc = 0;
     var finalPoint;
     var swipeContent = document.querySelector('.maincontent')
     swipeContent = addEventListener('touchstart', function(event) {
-
     initialPoint=event.changedTouches[0];
     event.stopPropagation();
     }, false)
