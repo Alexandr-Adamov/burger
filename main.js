@@ -28,7 +28,10 @@ function menuAccordionTeam (e){
     currentTeamAccordion.classList.toggle('team__item_activ')
 }
 teamAccordion.addEventListener('click', function (e) {
-    menuAccordionTeam (e)
+    if(e.isTrusted === false){
+        menuAccordionTeam (e)
+    }
+    
 })
 
 // меню аккордион секции menu
@@ -44,7 +47,10 @@ function menuAccordionMenu (e) {
     }
 }
 menuList.addEventListener('click', function (e) {
-    menuAccordionMenu (e)
+    if(e.isTrusted === false){
+        menuAccordionMenu (e)
+    }
+    
 });
 
 // клик на фото секции reviews
@@ -101,10 +107,17 @@ function arrowClickRight (e){
     darkTitle.style.left = '-' + acc + '%'
 }
 arrowRight.addEventListener('click', function (e) {
-    arrowClickRight (e)
+    console.log(e)
+    if(e.isTrusted === true){
+        arrowClickRight (e)
+    }
+    
 });
 arrowLeft.addEventListener('click', function (e) {
-    arrowClickLeft (e)
+    if(e.isTrusted === true){
+        arrowClickLeft (e)
+    }
+    
 });
 
 //меню бургеров секции dark
@@ -121,7 +134,10 @@ function showMiniMenu (e){
 }
 
 iconMiniMenu.addEventListener('click', function(e){
-    showMiniMenu (e)
+    if(e.isTrusted === true){
+        showMiniMenu (e)
+    }
+    
 })
 // клик на контент на touchpad
 var maincontent =document.querySelector('.maincontent')
