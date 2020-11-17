@@ -7,9 +7,12 @@ function hamburgerButtonMenu () {
     burgerForm.classList.toggle('burger__form--open')
     hamburgerMenu.classList.toggle('hero__burger_menu')
     hamburgerList.classList.toggle('hamburger__menu_list--hidden')
+    
 }
 burgerBtn.addEventListener('click',  function (e) {
-    hamburgerButtonMenu ();
+    if(e.isTrusted === false){
+        hamburgerButtonMenu ();
+    }
 });
 
 // меню аккордион секции team
